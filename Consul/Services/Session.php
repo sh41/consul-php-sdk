@@ -60,6 +60,11 @@ class Session
         return $this->client->get('/v1/session/list', $params);
     }
 
+    /**
+     * @param string $sessionId
+     * @param array  $options
+     * @return mixed
+     */
     public function renew($sessionId, array $options = array())
     {
         $params = array(
